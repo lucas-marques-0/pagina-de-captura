@@ -1,0 +1,127 @@
+*{ /* "agora queremos tirar todas (por isso o *) as bordas e paddins dos elementos (pra colcar os elementos) */
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif; /* PRA MUDAR A FONTE DE TODA A PÁGINA */
+    background-color: black;
+}
+
+.container{ /* apenas para ajustar o tamanho (colocando um tamanho definido/limitado) */
+    max-width: 1000px;
+    margin: auto;
+}
+
+header{
+    background-color: #48C5CE;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.titulo{
+    font-size: 26px;
+}
+
+/* alterandio conteúdo principal */
+section{
+    padding: 20px; /* dando um espaçamento do conteúdo da borda */
+    background-image: url(./images/people.jpg); /* adicionando a imagem de fundo da parte principal do site */
+    background-size: cover; /* pra imagem exatamente o tamanho da div */
+    overflow: hidden; /* para ajustar a imagem (que esta maior que o elemento que ele está inserido) */
+}
+
+.container_formulario{
+    max-width: 230px; /* limitando a largura (para que tudo caiba normalmente) */
+    background-color: #FFFFFFBB; /* Cor de fundo branca (f) e esses (BB) é referente a opacidade */
+    padding: 20px; /* da uma espaçamento e aumento no container */
+    float: right; /* colando ele na direita */
+}
+
+/* agora vamos ajusatar dentro do container a parte das informações */
+h2{
+    font-size: 16px;
+}
+
+.margin_bottom{ /* invés de aplicar pros dois, pdoemos criar uma classe com a propriedade e adicionar nas duas */
+    margin-bottom: 15px;
+}
+/* agora vamos ajusatar dentro do container a parte do formulário */
+input, select{ /* como vamos alterar nos dois a mesma coisa podemos usar a vírgula */
+    width: 100%; /* toda a largura (tirando o padding) */
+    box-sizing: border-box; /* para que tudo fique alinhado e não tenha algum campo sobrando com largura maior */
+    padding: 10px; /* aumentando o espaçamento/tamanho das caixas do formulário ("deixando mais gordinhos") */
+    border: none; /* tirando todas as bordas padrões entre eles (mas agora eles ficaram colcados) */
+    margin-bottom: 10px; /* usamos isso para descolar, aplicamos border:none para que realmente td fique certinho*/
+}
+/* mudado o botão (ele vai ter as configurações de cima que são partilhadas com os inputs e mais essas exclusivas*/
+input[type="submit"]{ /* ou seja, esse estilo aqui vai ser aplicado a todos os inputs que tenha o tipo submit */
+    color: white;
+    background-color: #48C5CE;
+    font-weight: bold;
+}
+
+/* personalizando o ícone de escolher cidade (pois em alguns navegadores isso muda, e isso serve para ser padrão)*/
+select{
+    /* fazendo funcionar em todos os navegadores */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* adicionando oe configurando sua posição */
+    background-image: url(./images/arrow.jpg);
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px); /*usanso uma função que permite calcular "100% no eixo x menos 10px*/
+    background-position-y: center; /* centralizando verticalmente com a caixa */
+}
+
+/* configurando o rodapé */
+footer{
+    background-color: #202121;
+    padding: 40px;
+    text-align: center; /* centralizando o texto e a imagem para o centro (porém o estilo do texto mudou) */
+}
+
+.foto{
+    width: 160px;
+}
+.descriçao{
+    color: white;
+    display: inline-block; /* para que a imagem e texto fiquem na mesma "linha" (lado a lado) */
+    max-width: 40%;
+    margin-left: 40px; /* distanciando da foto */
+    text-align: left; /* concertando o que o text align center fez com o texto no footer */
+}
+
+.descriçao p, .descriçao h3{ /* modificando os <p> e <h3> dentro da classe .descrição */
+    margin-bottom: 20px;
+}
+
+
+/* ele mando ou lição de casa para fazer o projeto (asistir o vídeo) */
+/* adicionar uma responsividade de redimensionamento apó uma certa largura */
+@media screen and (max-width: 600px){
+    .container_formulario{
+        float: none;
+        margin: auto;
+    }
+
+    .foto{
+        display: block;
+        float: none;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .descriçao{
+        float: none;
+        margin: auto;
+        text-align: center;
+
+        /* adicionando mais algumas coisas adicionais e opcionais (no codigo onde busquei entender) */
+        display:block;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+
+    <!-- trocando a ícione dapágina --> 
+    <link href="./images/ico.png" rel="icon" type="icon/png"> <!-- "funciona sem o type, mais é melhor usar" -->
+    <title>Workshop</title>
+</head>
+<body>
+
+    <div class="container"> <!-- apenas para ajustar o tamanho (colocando um tamanho definido/limitado) -->
+
+        <!-- cabeçalho (header) -->
+        <header>
+            <h1 class="titulo">PARTICIPE DO WORKSHOP QUE VAI MUDAR O SEU NEGÓCIO</h1>
+        </header>
+
+        <!-- conteúdo principal -->
+        <section>
+            <!-- criando o formulário -->
+            <div class="container_formulario">
+                <h2 class="margin_bottom">GARANATA O SEU LUGAR NO WORKSHOP DO MAIOR ESPECIALISTA EM MARKETING DA ATUALIDADE</h2>
+
+                <p class="margin_bottom">Nesse evento você vai aprender todos os segredos que vão te fazer ser um empreendedor de sucesso sem precisar contar com a sorte.</p>
+
+                <!-- MAIL CHIMP (1) -->
+                <form action="https://gmail.us5.list-manage.com/subscribe/post?u=89a18df45423d97e555dc6e31&amp;id=d8b755372c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>                                        
+                                        <!-- placeholder é o que vai aparecer no elemento -->
+                    <input id="nome" name="FNAME" type="text" placeholder="Seu nome"> 
+                    <input id="email" name="EMAIL" type="email" placeholder="Seu e-mail">
+                    <select name="CIDADE"> <!-- MAIL CHIMP (2) -->
+                        <option value="PE">Pernambuco</option>
+                        <option value="RJ">Rio de janeiro</option>
+                        <option value="SP">São paulo</option>
+                    </select>
+                    <input type="submit" value="Inscreva-se"> 
+                </form>
+            </div>
+        </section>
+        <!-- MAIL CHIMP (3) -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_89a18df45423d97e555dc6e31_d8b755372c" tabindex="-1" value=""></div>
+
+        <!-- criando o rodapá -->
+        <footer>
+            <img class="foto" src="./images/face.jpg">
+            <div class="descriçao">
+                <h3>Sobre o palestrante</h3>
+                <p>Carlos Fontana é conhecido por dar palestras que abalam a estrutura do marketing tradicional. Prepare-se para sair do evento com uma nova visão do que é possível ser feito para o seu negócio decolar.</p>
+
+                <p>Formado em Marketing pela Universidade XYZ e fundador da MarkUP, a empresa vencedora dos ultimos 5 Prêmios MarketingBR.</p>
+            </div>
+        </footer>
+    </div>  
+</body>
+</html>
+
+
+<!-- MAIL CHIMP -->
+<!-- para integrar com o mail chimp precisamos criar no mailchimp (Audience > Signup forms > Form builder) as configurações de entrada de dados, logo depois copiar os códigos que ele nos fornecem (no Embedded forms) e extrair e substituir alguma coisas para implantar em nossos códigos (são o action e o método) -->
+<!-- e assim o servidor e o backend do mail chimp fucione perfeitamente -->
+
+<!-- 1) copiar os atributos <form> (pode ser todos ou só o "action" e o "method") e colocar no NOSSO <form> -->
+<!-- 2) trocar os "names" dos inputs do nosso forms para o que nós configuramos no mailchim (e está no código) -->
+<!-- 3) copiar e colcar a primeira div após a parte "real people should not fill this in and expect good things - do not remove this or risk form bot signups" e colar no final do NOSSO formulário -->
+
+<!-- após fazer tudo isso e tivermos pessoas que ja usaram esse mailchimp, podemos ir em "crate" e enviar um email para elas com o que queremos (infinitas possibilidades) -->
